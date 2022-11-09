@@ -16,4 +16,16 @@ function printAllPairs(n) {
 
 // SPACE COMPLEXITY
 // Rules of thumbs => primitive(boolean, numbers, undefined,null) are constant space
+// String require O(n) space where n is the string length
+// Reference types are generally O(n), where n is the length for arrays or the numbers of keys for objects
+// EXAMPLE
 
+function sum(arr) {
+    let total = 0;
+    for (let i =0; i < arr.length; i++) {
+        total += arr[i]
+    }
+    return total;
+}
+// constant space
+ 
