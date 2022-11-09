@@ -7,3 +7,13 @@ function printAllPairs(n) {
         }
     }
 }
+
+// Big O shorthands
+// Arithmetic operations are constant
+// Variable assignments is constant
+// Accessing elements in an array by index or object is constant
+// in a loop, the complexity is length of the loop times the complexity of whatever happends inside
+
+// SPACE COMPLEXITY
+// Rules of thumbs => primitive(boolean, numbers, undefined,null) are constant space
+
