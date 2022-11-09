@@ -34,4 +34,5 @@ console.log(sum(3)); // add up to 3
 // The same machine will record different times!
 // for fast algorithms, speed measurements may not be precise enough
 
-
+// Counting Operations
+// operations regardless of the size of n
