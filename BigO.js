@@ -29,3 +29,9 @@ console.log(sum(3)); // add up to 3
 // which function is better ?
 // faster? less memory-intensive? more readable?
 
+// NOTED: The problem with time
+// different machines will record different times
+// The same machine will record different times!
+// for fast algorithms, speed measurements may not be precise enough
+
+
