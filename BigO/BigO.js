@@ -20,6 +20,7 @@ console.log(`Time Elapsed: ${(t2 - t1)} seconds.`)
  
 // Function 2
 // performance wise function 2 is significantly faster
+// O(1)
 function sum(n) {
     return n * (n+1) /2
 }
