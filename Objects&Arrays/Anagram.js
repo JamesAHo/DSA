@@ -16,10 +16,10 @@ function validAnagram(arr1, arr2) {
     }
     // compare frequency 1 and frequency 2
     for (let key in frequencyCounter1) {
-        if (frequencyCounter1[key] === frequencyCounter2[key]) return true;
+        if (frequencyCounter1[key] !== frequencyCounter2[key]) return false;
 
     }
-    return false;
+    return true;
 }
 
 
