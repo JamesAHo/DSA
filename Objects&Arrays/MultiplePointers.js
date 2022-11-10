@@ -19,5 +19,22 @@ function sumZero(arr) {
     }
 
 }
+// REFACTOR
+function sumZero2(arr) {
+    // two pointers
+    let left = 0 // left pointer
+    let right = arr.length -1 // right pointer
+    // while loop
+    while (left < right) {
+        let sum = arr[left] + arr[right]
+        if(sum === 0) {
+            return [arr[left], arr[right]]
+        } else if (sum > 0) {
+            right--;
+        } else {
+            left++
+        }
+    }
+}
 
-sumZero([-4,-3,-2,-1,0,3,4,6])
+sumZero2([-4,-3,-2,-1,0,3,4,6])
