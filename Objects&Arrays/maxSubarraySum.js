@@ -50,6 +50,7 @@ function search(arr, val) {
     return -1
 }
 // REFACTOR - better approach
+// Log(N)
 function search2(arr, val) {
     let min = 0;
     let max = arr.length -1;
