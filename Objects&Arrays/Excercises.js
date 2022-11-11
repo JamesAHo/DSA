@@ -33,6 +33,7 @@ sameFrequency(182,1822) // fasle
    for(let val of a) {
     frequencyCounter[val] = (frequencyCounter[val] || 0) +1;
     console.log(frequencyCounter[val])
+    // if count in the object is greater than one that's mean there is duplicates.
     if(frequencyCounter[val] > 1) return true;
    }
    return false
