@@ -57,3 +57,22 @@ function countUniqueValues(arr) {
     }
 
 countUniqueValues([1,2,3,4,5,6]) // output 6
+
+// Write a function called isSubsequence which takes in two strings and checks whether the characters in the first string form a subsequence of the characters in the second string. In other words, the function should check whether the characters in the first string appear somewhere in the second string, without their order changing.
+function isSubsequence(s,t) {
+    // good luck. Add any arguments you deem necessary.
+    let left = 0;
+    let right = 0;
+    while(left < s.length ) {
+        if(s[left] === t[right]) {
+            left++;
+            right++
+        } else {
+            right++
+            if(right > t.length) return false
+        }
+    }
+    
+    return true
+    
+  }
