@@ -66,10 +66,11 @@ function maxSubarraySum(arr,num) {
    }
    tempSum = maxSum;
    for(let i = num; i < arr.length; i++) {
+        // sliding window method
         tempSum = tempSum - arr[i - num] + arr[i];
         maxSum = Math.max(maxSum, tempSum);
    }
-   return maxSubarraySum;
+   return maxSum
 
 }
 
