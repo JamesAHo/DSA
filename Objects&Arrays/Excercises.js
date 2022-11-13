@@ -29,16 +29,16 @@ sameFrequency(182,1822) // fasle
 
 // Implement a function called, areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates among the arguments passed in.  You can solve this using the frequency counter pattern OR the multiple pointers pattern.
  function areThereDuplicates(...a) {
-   let frequencyCounter = {};
-   for(let val of a) {
-    frequencyCounter[val] = (frequencyCounter[val] || 0) +1;
-    console.log(frequencyCounter[val])
-    // if count in the object is greater than one that's mean there is duplicates.
-    if(frequencyCounter[val] > 1) return true;
+   // using frequency counter pattern to count and if counter > 1 then return true for duplicate
+   let counter = {};
+   for ( let val of a) {
+    counter[val] = (counter[val] || 0) + 1;
+    if(counter[val] > 1 ) return true;
    }
    return false
  }
-
+// time complexity is O(N)
 areThereDuplicates(1,2,3,4,5,6,6,8,9)
+
 
 
