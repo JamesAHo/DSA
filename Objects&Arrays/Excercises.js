@@ -40,5 +40,18 @@ sameFrequency(182,1822) // fasle
 // time complexity is O(N)
 areThereDuplicates(1,2,3,4,5,6,6,8,9)
 
+// Write a function called averagePair. Given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average of the pair equals the target average.
+// There may be more than one pair that matches the average target.
 
+function averagePair() {
+    let start = 0
+    let end = arr.length-1;
+    while(start < end){
+      let avg = (arr[start]+arr[end]) / 2 
+      if(avg === num) return true;
+      else if(avg < num) start++
+      else end--
+    }
+    return false;
+}
 
