@@ -72,5 +72,19 @@ function fib2(n) {
 // reverse string recursion
 function reverse(str) {
     if(str.length <= 1) return str;
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring
     return str.charAt(str.length -1) + reverse(str.substring(0, str.length -1))
+    // alternatively str.splice(1) + str[0]
+}
+// isPalindrome
+function isPalindrome(str) {
+    // base cases
+    // if string is single letter "t" true
+    if(str.length === 1 ) return true;
+    // if string is 2 letters "tx" => "xt" true
+    if(str.length === 2) true;
+    if(str[0] === str.splice(-1)) return isPalindrome(str.splice(1,-1))
+    return false;
+
+
 }
