@@ -28,10 +28,26 @@ function outer(input) {
     return outerScopeVariable;
 }
 // Pure recursion
+// for arrays, use methods like slice, the spread operator, and concat that make copies of arrays so you do not mutate them
 function collectOddValues(arr) {
     let newArr = [];
     if(arr.length === 0) return newArr;
     if(arr[0] % 2 !== 0) return newArr.push(arr[0]);
-    newArr = newArr.concat(arr.slice(1));
+    newArr = newArr.concat(collectOddValues(arr.slice(1)));
     return newArr;
+}
+// Write a function called producOfArray which takes in  an array of numbers and returns the product of them all
+
+function producOfArray(arr) {
+    let result = 1
+    for(let i = 0; i < arr.length; i++) {
+        result *= arr[i];
+    }
+    return result;
+}
+// recursive version
+function producOfArray2(arr) {
+    let result = [];
+    if(arr.length === 0) return 1;
+    return arr[0] * result.concat(producOfArray2(arr.slice(1)))
 }
