@@ -51,3 +51,20 @@ function producOfArray2(arr) {
     if(arr.length === 0) return 1;
     return arr[0] * result.concat(producOfArray2(arr.slice(1)))
 }
+// Fib sequence
+function fib(n) {
+    if (n < 3) return 1;
+    let prev = 1;
+    let curr = 1;
+    for(let i = 2; i < n; i ++) {
+        const next = prev + curr;
+        prev = curr;
+        curr = next;
+    }
+    return curr;
+}
+// rescursive fib
+function fib2(n) {
+    if(n < 2) return 1;
+    return fib2(n-1) + fib2(n - 2)
+}
