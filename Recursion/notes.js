@@ -18,6 +18,7 @@ function factorial(num) {
     return num * factorial(num -1)
 }
 // implementation of helper method recursion
+// outer function is not recursive and call innter function which is recursive
 function outer(input) {
     var outerScopeVariable = []
     function helper(helperInput) {
@@ -25,4 +26,12 @@ function outer(input) {
     }
     helper(input)
     return outerScopeVariable;
+}
+// Pure recursion
+function collectOddValues(arr) {
+    let newArr = [];
+    if(arr.length === 0) return newArr;
+    if(arr[0] % 2 !== 0) return newArr.push(arr[0]);
+    newArr = newArr.concat(arr.slice(1));
+    return newArr;
 }
