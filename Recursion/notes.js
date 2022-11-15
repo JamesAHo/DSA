@@ -17,3 +17,12 @@ function factorial(num) {
     if(num === 1) return 1;
     return num * factorial(num -1)
 }
+// implementation of helper method recursion
+function outer(input) {
+    var outerScopeVariable = []
+    function helper(helperInput) {
+        helper(helperInput--)
+    }
+    helper(input)
+    return outerScopeVariable;
+}
