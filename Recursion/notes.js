@@ -65,6 +65,6 @@ function fib(n) {
 }
 // rescursive fib
 function fib2(n) {
-    if(n < 2) return 1;
+    if(n <= 2) return 1;
     return fib2(n-1) + fib2(n - 2)
 }
