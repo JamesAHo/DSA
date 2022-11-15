@@ -52,6 +52,7 @@ function producOfArray2(arr) {
     return arr[0] * result.concat(producOfArray2(arr.slice(1)))
 }
 // Fib sequence
+// fb(n) = fib(n-1) + fib(n - 2)
 function fib(n) {
     if (n < 3) return 1;
     let prev = 1;
@@ -67,4 +68,9 @@ function fib(n) {
 function fib2(n) {
     if(n <= 2) return 1;
     return fib2(n-1) + fib2(n - 2)
+}
+// reverse string recursion
+function reverse(str) {
+    if(str.length <= 1) return str;
+    return str.charAt(str.length -1) + reverse(str.substring(0, str.length -1))
 }
