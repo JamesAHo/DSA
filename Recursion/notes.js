@@ -85,6 +85,8 @@ function isPalindrome(str) {
     if(str.length === 2) true;
     if(str[0] === str.splice(-1)) return isPalindrome(str.splice(1,-1))
     return false;
-
-
+}
+// two pointers approach
+function isPalindrome2(n) {
+    
 }
