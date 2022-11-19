@@ -11,4 +11,31 @@
 // While there are still valies we haven't look at
     // If the value in the the first array is smaller than the value in the second array, push the value in the first array into out results and move on to the next value in the first array.
     // Once we exhaust one array, push in all remaining values from the other array
-    
+
+    // make a function emrge
+    function merge(arr1,arr2) {
+        let result = [];
+        let i = 0;
+        let j = 0;
+        // while loop defines while 2 arrays are still in process of comparing
+        while(i < arr1.length && j < arr2.length) {
+            if(arr2[j] > arr1[i]) {
+                result.push(arr1[i]);
+                i++;
+            } else {
+                result.push(arr2[j]);
+                j++;
+            }
+        }
+        // exhaust thhe loop in case of arr 1 ends before arr 2 ends
+        while(i < arr1.length) {
+            result.push(arr1[i]);
+            i++;
+        }
+        while(j < arr2.length) {
+            result.push(arr2[j]);
+            j++;
+        }
+        return result;
+    }
+    merge([1,10,50],[2,14,99,100])
