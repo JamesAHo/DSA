@@ -4,7 +4,7 @@
 // If a smaller number is found, desinate that smaller number to be the new minium and contue untill the end of the array
 // If the minium is not the value(index) you initially began with, swap the two values.
 // Repeat this with the next elementuntill array is sorted
-
+// time complexity is On^2
 function selectionSort(arr) {
     var noSwap;
     for(var i=0; i < arr.length; i++) {
