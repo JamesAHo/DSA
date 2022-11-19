@@ -5,5 +5,10 @@
 // sortting is an increadibly common task, so it's good to know how it works
 // There are many diifferent ways top sort things, and different techniques have their own advantage
 
+// javascript built in sorting
+
+function numberCompare(num1, num2 ) {
+    return num1 - num2;
+}
 
 
