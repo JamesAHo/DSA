@@ -39,3 +39,8 @@
         return result;
     }
     merge([1,10,50],[2,14,99,100])
+// actual mergeSort
+// Recursion approach
+// Break up the array into halves untull you have arrays that are empty or have one element.
+// Once have smaller sorted array, merge those arrays with other sorted arrays untill you are back at the full length of the array
+// once the array ahs been emrged back together, return the emrge(and sorted) array
