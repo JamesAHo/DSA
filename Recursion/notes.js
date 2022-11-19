@@ -82,11 +82,15 @@ function isPalindrome(str) {
     // if string is single letter "t" true
     if(str.length === 1 ) return true;
     // if string is 2 letters "tx" => "xt" true
-    if(str.length === 2) true;
+    if(str.length === 2) str[0] === str[1];
     if(str[0] === str.splice(-1)) return isPalindrome(str.splice(1,-1))
     return false;
 }
 // two pointers approach
 function isPalindrome2(n) {
-    
+    let left = 0;
+    let right = 0;
+    while (left < right) {
+        
+    }
 }

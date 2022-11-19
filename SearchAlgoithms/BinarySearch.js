@@ -13,8 +13,6 @@ function BinarySearch(arr,value) {
         middle = Math.floor(left + right) / 2
         
     }
-    if(arr[middle] === value) {
-        return middle;
-    }
-    return -1
+    
+    return arr[middle] === value ? middle : -1
 }
