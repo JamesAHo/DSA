@@ -44,3 +44,18 @@
 // Break up the array into halves untull you have arrays that are empty or have one element.
 // Once have smaller sorted array, merge those arrays with other sorted arrays untill you are back at the full length of the array
 // once the array ahs been emrged back together, return the emrge(and sorted) array
+
+function mergeSort(arr) {
+    // break array in halves base case
+    if(arr.length <= 1) return arr;
+    let mid = Math.floor(arr.length / 2);
+    let left = mergeSort(arr.slice(0, mid));
+    let right = mergeSort(arr.slice(mid));
+    return merge(left, right)
+}
+
+mergeSort([10,24,76,73,72,1,9])
+
+// BigO of merge sort
+// Time Complexity O(n log n)
+// Space Complexity O(n)
