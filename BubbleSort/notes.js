@@ -28,6 +28,7 @@ function Bubblesort(arr) {
     return arr;
 }
 // Bubblesort optomized solution
+// Time complexity O(n^2)
 function Bubblesort2(arr) {
     var noSwap;
     for(var  i =  arr.length; i > 0; i--) {
