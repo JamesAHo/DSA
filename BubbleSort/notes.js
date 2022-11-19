@@ -12,3 +12,18 @@ function numberCompare(num1, num2 ) {
 }
 
 
+// Bubble sorting
+// sorting algorithm where the largest values bubble up to top values/
+function Bubblesort(arr) {
+    
+    for(let i = 0; i < arr.length; i++) {
+        for(let j = 0; j < arr.length; j++) {
+            if(arr[j] > arr[j+1]) {
+                var temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    return arr;
+}
