@@ -6,9 +6,8 @@ function NaiveString(long,short) {
             if(short[i] !== long[j]) {
                 break;
             }
-            if(j === short.length - 1) {
-                count++;
-            }
+            if(j === short.length - 1) count++
+
         }
     }
 }
