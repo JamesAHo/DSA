@@ -23,4 +23,5 @@ function selectionSort(arr) {
     }
     return arr;
 }
-selectionSort([34,22,14,42,17])
+selectionSort([34,22,14,42,17]);
+// completed selectionSort
