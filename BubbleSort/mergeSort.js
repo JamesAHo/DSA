@@ -43,7 +43,7 @@
 // Recursion approach
 // Break up the array into halves untill you have arrays that are empty or have one element.
 // Once have smaller sorted array, merge those arrays with other sorted arrays untill you are back at the full length of the array
-// once the array ahs been emrged back together, return the emrge(and sorted) array
+// once the array ahs been emrged back together, return the emrge(and sorted) array.
 
 function mergeSort(arr) {
     // break array in halves base case
