@@ -47,8 +47,8 @@ class singlyLinkedList {
     shifting() {
         if(!this.head) return undefined;
         temp = this.head;
-        this.head = this.head.next;
-        temp.next = null;
+        this.head = temp.next;
+        this.length--;
         // No node situation
         if(this.length === 0) {
             this.tail = null;
