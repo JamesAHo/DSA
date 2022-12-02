@@ -93,5 +93,17 @@ class singlyLinkedList {
     // if the index is 0, unshift, a new node to the start of the list
     // Otherwise, using the get method, access the node at the index -1
     // Set the next property on that node to be the new node
+    insert(index,value) {
+        if(index < 0 || index > this.length) return false;
+        if(index === this.length) return this.push(value);
+        if(index === 0) return this.unshifting(value);
+        const newNode = new Node(value);
+        prev = this.get(index - 1);
+        temp = prev.next;
+        prev.next = newNode;
+        newNode.next = temp;
+        this.length++;
+        return true;
+    }
     
 }
