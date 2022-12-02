@@ -76,4 +76,22 @@ class singlyLinkedList {
         }
         return temp;
     }
+    // This function should accept a value and an index
+    // Use get function to find the specific node
+    // If the node is not found return false
+    // if the node is found, set the value of that node to be the value passed to the fuction and return true
+    set(index,value) {
+        nodeIsFound = this.get(index);
+        if(nodeIsFound){
+            nodeIsFound.value = value;
+            return true;
+        }
+        return false;
+    }
+    // If the index is less than zero or greater than the length return false
+    // If the index is the same as the length, push a new node to the end of the list.
+    // if the index is 0, unshift, a new node to the start of the list
+    // Otherwise, using the get method, access the node at the index -1
+    // Set the next property on that node to be the new node
+    
 }
