@@ -98,12 +98,29 @@ class singlyLinkedList {
         if(index === this.length) return this.push(value);
         if(index === 0) return this.unshifting(value);
         const newNode = new Node(value);
-        prev = this.get(index - 1);
-        temp = prev.next;
+        const prev = this.get(index - 1);
+        const temp = prev.next;
         prev.next = newNode;
         newNode.next = temp;
         this.length++;
         return true;
+    }
+    // if the index is less than 0 or greather than the length, return undefined
+    // If the index is the same as the length-1, pop
+    // If the index is 0, shift
+    // Otherwise, using the get method, access the node at index-1
+    // Set the next property on that node to be the next of the next node
+    // decreement the length
+    // return the value of the node removed
+    remove(index) {
+        if(index < 0 || index >= this.length) return undefined;
+        if(index === this.length -1) return this.pop();
+        if(index === 0) return this.shifting();
+        let previousNode = this.get(index-1);
+        let removed = previousNode.next;
+        previousNode.next = removed.next;
+        this.length--;
+        return removed
     }
     
 }
