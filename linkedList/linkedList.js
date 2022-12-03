@@ -148,6 +148,7 @@ class singlyLinkedList {
     isPalindrome(head){
         let fast = this.head;
         let slow = this.head;
+        // is to find midpoint 
         while(fast&& fast.next) {
             slow = slow.next;
             fast = fast.next.next;
