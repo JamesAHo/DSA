@@ -122,5 +122,33 @@ class singlyLinkedList {
         this.length--;
         return removed
     }
+    // Swap the head and the tail
+    // Create a variable called next
+    // create a variable called previous
+    // create a variable called node and initialized it to the head property
+    // Loop throught the list
+    // Set next to be the next property on whatever node is
+    // Set the next proptery on the node to be whatever prev is
+    // set the prev to be the value of the node variable
+    reverse() {
+        let temp = this.head;
+        this.head = this.tail;
+        this.tail = temp;
+        var next;
+        var prev = null;
+        for(var i = 0; i < this.length; i++) {
+            next = temp.next;
+            temp.next = prev;
+            prev= temp;
+            temp = next;
+        }
+
+        return this;   
+    }
     
 }
+// BigO notation
+// Insertion O(1)
+// Removal O(1) or O(N)
+// Searching O(N)
+// Access O(N)
