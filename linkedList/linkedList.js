@@ -145,7 +145,21 @@ class singlyLinkedList {
 
         return this;   
     }
-    
+    isPalindrome(head){
+        let fast = this.head;
+        let slow = this.head;
+        while(fast&& fast.next) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        fast = head;
+        slow = reverse(slow)
+        while(slow) {
+            if(fast.val !== slow.val) return false;
+            slow = slow.next;
+            fast = fast.next
+        }
+    }
 }
 // BigO notation
 // Insertion O(1)
