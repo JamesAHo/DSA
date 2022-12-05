@@ -32,8 +32,11 @@ const compare = (list1,list2) => {
 }
 
 const isPalindrome = (head) => {
+    // find the middle point
     const midpoint = findMidpoint(head);
+    // reverse the tail
     const tail = reverse(midpoint);
+    // apply compare the head and the tail to see if equal
     return compare(head,tail)
 
 }
