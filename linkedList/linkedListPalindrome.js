@@ -37,6 +37,6 @@ const isPalindrome = (head) => {
     // reverse the tail
     const tail = reverse(midpoint);
     // apply compare the head and the tail to see if equal
-    return compare(head,tail)
+    return compare(head,tail);
 
 }
