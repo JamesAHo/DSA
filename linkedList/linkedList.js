@@ -120,7 +120,7 @@ class singlyLinkedList {
         let removed = previousNode.next;
         previousNode.next = removed.next;
         this.length--;
-        return removed
+        return removed;
     }
     // Swap the head and the tail
     // Create a variable called next
