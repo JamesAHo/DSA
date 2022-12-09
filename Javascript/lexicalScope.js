@@ -17,4 +17,15 @@ function findName() {
 function sayMyName() {
     return findName();
 };
-// 
+// Lexical Scope within lexical environment
+function sayMyName() {
+    var a = 'a';
+    return function findName() {
+        var b = 'b';
+        return function printName() {
+            var c = 'c';
+            return 'James A Ho'
+        }
+    }
+}
+sayMyName()()() // => result will be James A Ho
