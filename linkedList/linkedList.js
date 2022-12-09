@@ -161,6 +161,18 @@ class singlyLinkedList {
             fast = fast.next
         }
     }
+    deleteDuplicates() {
+        const head = new NodeList(value) 
+        let current = head;
+        while(current !== null && current.next !== null){
+            if(current.value === current.next.value) {
+                current.next = current.next.next;
+            } else {
+                current = current.next;
+            }
+        }
+        return head;
+    }
 }
 // BigO notation
 // Insertion O(1)
