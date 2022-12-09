@@ -12,8 +12,9 @@ function findName() {
 
     }
     return printName();
-}
+};
 // lexical environment sayMyName
 function sayMyName() {
     return findName();
-}
+};
+// 
