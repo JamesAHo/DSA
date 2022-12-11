@@ -158,7 +158,7 @@ class singlyLinkedList {
         while(slow) {
             if(fast.val !== slow.val) return false;
             slow = slow.next;
-            fast = fast.next
+            fast = fast.next;
         }
     }
     deleteDuplicates() {
