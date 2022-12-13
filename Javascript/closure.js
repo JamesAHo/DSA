@@ -53,3 +53,37 @@ const makeNuclearButton = () => {
 }
 const ohno = makeNuclearButton();
 
+// Example
+let view;
+function initialized() {
+    let called = 0;
+    return function() {
+        if(called > 0) {
+            return;
+        } else {
+            view = "view";
+            called++;
+            console.log('view has been set')
+        }
+    }
+}
+const startOnce = initialized();
+startOnce();
+// Example
+const array = [1,2,3,4];
+for(let i = 0; i <= array.length; i++) {
+    setTimeout(function() {
+        console.log('I am at index' + array[i])
+    },3000)
+}
+// another way to solve this array is to invoke function when var is the global scope
+// var is globally declared
+for(var i = 0; i <= array.length; i++) {
+  // invoke the function so call i as parameters
+  (function(ClosureI){
+    setTimeout(function() {
+        console.log('I am at index' + array[ClosureI])
+    },3000)
+  })(i)
+}
+// by invoking the function closureI the function now exposed to global scope which can access in this.window 
