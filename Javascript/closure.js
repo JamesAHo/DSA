@@ -23,3 +23,33 @@ function CallMe() {
     const CallMe = 'Hello Call Me'
 }
 CallMe();
+
+// Closure is Memory efficient and encapsulation
+// Memory efficient
+function heavyDuty(index) {
+    const bigArray = new Array(7000).fill('😊');
+    return bigArray
+}
+function heavyDuty2() {
+    const bigArray = new Array(7000).fill('😊');
+    return function(index) {
+        return bigArray[index]
+    }
+}
+// Encapsulation
+const makeNuclearButton = () => {
+    let timeWithoutDestruction = 0;
+    const passTime = () => timeWithoutDestruction++;
+    const totalPeaceTime = () => timeWithoutDestruction;
+    const launch = () => {
+        timeWithoutDestruction = -1;
+        return '🚀';
+    }
+    setInterval(passTime, 1000);
+    return {
+        launch: launch,
+        totalPeaceTime: totalPeaceTime
+    } 
+}
+const ohno = makeNuclearButton();
+
