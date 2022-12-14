@@ -53,3 +53,27 @@ const person4 = {
     return inner()
 }
 }
+// super keyword
+class Shoes {
+    constructor(name,type,size) {
+        this.name = name;
+        this.type = type;
+        this.size = size;
+    }
+}
+
+class Nike extends Shoes {
+    constructor(name, type, size, rarity) {
+        super(name, type, size);
+        this.rarity = rarity
+    }
+    releases() {
+        return 'Lost and Found Just Recently Released 2 weeks ago'
+    }
+    shoesname() {
+        return 'This shoes size' + this.size
+    }
+}
+
+const Chicago = new Nike();
+Chicago.shoesname
