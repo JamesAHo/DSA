@@ -1,4 +1,5 @@
 // ES6 Class
+// Class is a syntax sugar keyword but still an object JS
 class Elf {
     constructor(name, weapon) {
         this.name = name;
