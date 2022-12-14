@@ -87,3 +87,8 @@ for(var i = 0; i <= array.length; i++) {
   })(i)
 }
 // by invoking the function closureI the function now exposed to global scope which can access in this.window 
+// using Object.scrate to create object
+let object = {
+    shining: true
+}
+let newObject = Object.create(object)
