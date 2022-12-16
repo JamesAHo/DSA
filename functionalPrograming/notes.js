@@ -48,3 +48,12 @@ const curriedMultiply = (a) => (b) => a*b; // with currying, we can return funct
 const multiplyby5 = curriedMultiply(5);
 
 multiplyby5(4) // 20
+
+// Partial Application
+function add(x,y) {
+    return x + y;
+}
+// use the bind method to create a partially applied function
+// the bind methods create a new function with specificed this keyword value set to null.
+const addThree = add.bind(null,3);
+console.log(addThree(4))
