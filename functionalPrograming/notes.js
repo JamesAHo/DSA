@@ -21,4 +21,11 @@ function notGood(num) {
 }
 notGood()
 // Imperative vs Declerative
+// tell program what to do NOT how to do it
 
+// Immutability concept
+const obj = {name:'James'}
+function clone(obj) {
+    return {...obj} // this is pure
+};
+obj.name = 'Jenny';
