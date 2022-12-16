@@ -29,3 +29,22 @@ function clone(obj) {
     return {...obj} // this is pure
 };
 obj.name = 'Jenny';
+
+// HOF
+const hof = () => () => 5;
+hof()();
+// Closure
+const closure = function() {
+    let count = 0;
+    return function increment() {
+        count++
+    }
+}
+closure()
+
+// currying
+const multiply = (a,b) => a*b; // without currying
+const curriedMultiply = (a) => (b) => a*b; // with currying, we can return function inside function for reusable
+const multiplyby5 = curriedMultiply(5);
+
+multiplyby5(4) // 20
