@@ -76,4 +76,9 @@ class Nike extends Shoes {
 }
 
 const Chicago = new Nike();
-Chicago.shoesname
+// Pillars of OOP
+// Encapsulation - easier to maintain and reusale because of the class packages
+// Abstraction - Hiding the complexity.
+// Inheritance - avoid to rewrite the same codes
+// Polymorphism - many forms, ability to appear in many forms and process object differently depending on their data type or class
+
