@@ -20,7 +20,7 @@ function purchaseItem(...fns) {
     return fns.reduce(compose)
 }
 function itemToCart(user, item) {
-    const updatedCart = user.cart.concat([item]);
+    const updatedCart = user.cart.concat(item);
     return Object.assign({},user,{cart:updatedCart})
 }
 function applyTaxToItems(user) {
