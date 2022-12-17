@@ -16,6 +16,10 @@ async function getData() {
 // Promises 
 // 
 const promise = new Promise((resolve,reject) => {
-    resolve('worked');
-    reject('Error')
-})
+    if(true){
+        resolve('worked');
+    } else {
+        reject('Failed');
+    }
+});
+promise.then(result => console.log(result));
