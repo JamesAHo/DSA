@@ -22,4 +22,19 @@ const promise = new Promise((resolve,reject) => {
         reject('Failed');
     }
 });
-promise.then(result => console.log(result));
+// promise .all
+const promise1 = new Promise((resolve,reject) => {
+   setTimeout(resolve,100,'PAWPAWPAWPAWPAWPAWPAWPAWPA')
+});
+const promise2 = new Promise((resolve,reject) => {
+    setTimeout(resolve,200,'PewPeww');
+ });
+ const promise3 = new Promise((resolve,reject) => {
+    setTimeout(resolve,400,'PeoPeoo');
+ });
+ const promise4 = new Promise((resolve,reject) => {
+    setTimeout(resolve,400,'Phawphaww');
+ });
+Promise.all([promise1, promise2, promise3, promise4]).then(values => {
+    console.log(values);
+})
