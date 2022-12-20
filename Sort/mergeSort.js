@@ -59,4 +59,4 @@ console.log(mergeSort([10,24,76,73,72,1,9]))
 
 // BigO of merge sort
 // Time Complexity O(n log n)
-// Space Complexity O(n)
+// Space Complexity O(n);
