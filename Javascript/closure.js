@@ -20,7 +20,7 @@ function CallMe() {
     setTimeout(function(){
         console.log(CallMe)
     },4000);
-    const CallMe = 'Hello Call Me'
+    const CallMe = 'Hello Call Me';
 }
 CallMe();
 
@@ -92,3 +92,14 @@ let object = {
     shining: true
 }
 let newObject = Object.create(object)
+
+// Excercise - extend the functionality of a built in project
+
+// Date oject => to have new method .lastYear() which shows you last year 'YYYY' format.
+Date.prototype.lastYear = function() {
+    return this.getFullYear() - 1;
+}
+new Date('1994-2-2').lastYear()
+//"1899"
+
+// 
