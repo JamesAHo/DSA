@@ -18,7 +18,7 @@ a()()() // => granpda>father>son
 // Excercise
 function CallMe() {
     setTimeout(function(){
-        console.log(CallMe)
+        console.log(CallMe);
     },4000);
     const CallMe = 'Hello Call Me';
 }
