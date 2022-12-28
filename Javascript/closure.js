@@ -33,7 +33,7 @@ function heavyDuty(index) {
 function heavyDuty2() {
     const bigArray = new Array(7000).fill('😊');
     return function(index) {
-        return bigArray[index]
+        return bigArray[index];
     }
 }
 // Encapsulation
