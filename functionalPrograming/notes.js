@@ -40,7 +40,7 @@ const closure = function() {
         count++
     }
 }
-closure()
+closure();
 
 // currying
 const multiply = (a,b) => a*b; // without currying
