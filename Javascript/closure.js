@@ -48,7 +48,7 @@ const makeNuclearButton = () => {
     setInterval(passTime, 1000);
     return {
         launch: launch,
-        totalPeaceTime: totalPeaceTime
+        totalPeaceTime: totalPeaceTime;
     } 
 }
 const ohno = makeNuclearButton();
