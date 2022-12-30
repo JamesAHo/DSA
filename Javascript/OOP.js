@@ -71,7 +71,7 @@ class Nike extends Shoes {
         return 'Lost and Found Just Recently Released 2 weeks ago'
     }
     shoesname() {
-        return 'This shoes size' + this.size
+        return 'This shoes size' + this.size;
     }
 }
 
