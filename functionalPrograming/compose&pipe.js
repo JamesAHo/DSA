@@ -20,3 +20,6 @@ const mul2 = (x) => x * 2;
 
 const mul2ThenAdd1 = pipe(mul2, add1);
 console.log(mul2ThenAdd1(3));  // 7
+
+// Arity
+

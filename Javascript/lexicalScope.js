@@ -24,7 +24,7 @@ function sayMyName() {
         var b = 'b';
         return function printName() {
             var c = 'c';
-            return 'James A Ho'
+            return 'James A Ho';
         }
     }
 }
