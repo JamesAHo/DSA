@@ -41,7 +41,7 @@ function CharCount(str) {
         if(result[char] > 0) {
             result[char]++
         } else {
-            result[char] = 1
+            result[char] = 1;
         };
     }
     // return object at end for each character ...
