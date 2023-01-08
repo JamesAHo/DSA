@@ -38,10 +38,27 @@ class DoublyLinkedList{
         } else {
             this.tail = temp.prev;
             this.tail.next = null;
+            temp.prev = null;
         }
         this.length--;
+        return temp;
         // 27 <-- 89
     //    --> null
+    }
+    // shift method
+    shift(){
+        if(this.length === 0) return undefined;
+        const temp = this.head;
+        if(this.length === 1) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            this.head = temp.next;
+            this.head.prev = null;
+            temp.next = null;
+        }
+        this.length--;
+        return temp;
     }
     
 }
