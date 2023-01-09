@@ -72,7 +72,7 @@ class DoublyLinkedList{
             this.head = newNode;
         }
         this.length++;
-        return this
+        return this;
         // 1 2
         // newNode 1 2 
     }
