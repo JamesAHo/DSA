@@ -144,7 +144,7 @@ class DoublyLinkedList{
             current = current.prev
         }
         if(temp !== null){
-            head = temp.prev
+            head = temp.prev;
         }
     }
 };
