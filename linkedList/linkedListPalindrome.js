@@ -26,7 +26,7 @@ const compare = (list1,list2) => {
     while(list1 && list2) {
         if(list1.val !== list2.val) return false;
         list1 = list1.next;
-        list2 = list2.next
+        list2 = list2.next;
     }
     return true
 }
