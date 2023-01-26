@@ -61,7 +61,7 @@ function threeConsecutiveNumbers(arr) {
             count++;
             if(count === 3) return true;
         } else {
-            count = 0
+            count = 0;
         }
     }
     return false;
