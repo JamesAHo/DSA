@@ -16,5 +16,5 @@ const archer = {
     name: 'Apple',
     health: 30,
     
-}
+};
 wizard.heal.call(archer);
