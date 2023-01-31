@@ -99,7 +99,7 @@ let newObject = Object.create(object)
 Date.prototype.lastYear = function() {
     return this.getFullYear() - 1;
 }
-new Date('1994-2-2').lastYear()
+new Date('1994-2-2').lastYear();
 //"1899"
 
 // 
