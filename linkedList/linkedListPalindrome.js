@@ -39,4 +39,4 @@ const isPalindrome = (head) => {
     // apply compare the head and the tail to see if equal
     return compare(head,tail);
 
-}
+};
