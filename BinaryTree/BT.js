@@ -38,4 +38,21 @@ class BST {
             }
         }
     }
+    // find method
+    find(value){
+        if(this.root === null) return false;
+        var temp = this.root,
+            found = false;
+        while(temp && !found) {
+            if(value < current.value){
+                temp = temp.left;
+            } else if(value > temp.value){
+                temp = temp.right;
+            } else {
+                found = true;
+            }
+        }
+        if(!found) return false;
+        return temp;
+    }
 }
