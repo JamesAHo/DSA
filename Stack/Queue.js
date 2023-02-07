@@ -4,7 +4,7 @@ class Node {
         this.next = null;
     }
 }
-class Queue{
+class Queue {
     constructor() {
         this.first = null;
         this.last = null;
