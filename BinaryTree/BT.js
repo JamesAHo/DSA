@@ -52,7 +52,6 @@ class BST {
                 found = true;
             }
         }
-        if(!found) return false;
-        return temp;
+        return false;
     }
 }
