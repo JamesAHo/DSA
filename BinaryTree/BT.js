@@ -54,4 +54,13 @@ class BST {
         }
         return false;
     }
+    BFS(){
+        var data = [],
+            queue = [],
+            node = this.root
+        queue.push(this.root);
+        while(queue.length){
+            queue.shift()
+        }
+    }
 }
