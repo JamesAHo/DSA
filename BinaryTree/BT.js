@@ -55,12 +55,16 @@ class BST {
         return false;
     }
     BFS(){
-        var data = [],
-            queue = [],
-            node = this.root
+        var node  = this.root,
+            data = [],
+            queue = [];
         queue.push(this.root);
         while(queue.length){
-            queue.shift()
+            node = queue.shift();
+            data.push(node);
+            if(node.left) queue.push(node.left);
+            if(node.right) queue.push(node.right)
         }
+        return data;
     }
 }
