@@ -67,7 +67,16 @@ class BST {
         }
         return data;
     }
+    // DFS PreOrder
     BFS2(){
-        
+        var data = [];
+        // helper function
+        function traverse(node){
+            data.push(node);
+            if(node.left) traverse(node.left);
+            if(node.right) traverse(node.right);
+        }
+        traverse(this.root);
+        return data;
     }
 }
