@@ -67,4 +67,7 @@ class BST {
         }
         return data;
     }
+    BFS2(){
+        
+    }
 }
