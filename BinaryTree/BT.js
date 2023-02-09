@@ -67,6 +67,10 @@ class BST {
         }
         return data;
     }
+    // 
+    BFS2(){
+
+    }
     // DFS PreOrder
     DFS2(){
         var data = [];
