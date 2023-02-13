@@ -36,7 +36,7 @@ class MaxBinaryHeap{
         const max = this.value[0];
         const end = this.value.pop();
         if(this.value.length > 0){
-            this.value[0] = end;
+            max = end;
             this.sinkingdown();
         }
         return max;
@@ -49,7 +49,7 @@ class MaxBinaryHeap{
             let leftChildIdx = 2*idx + 1;
             let rightChildIdx = 2*idx + 2;
             let leftChild,rightChild;
-            // let swap null
+            // let swap null 
             let swap = null;
             if(leftChildIdx < length){
                 leftChild = this.value[leftChildIdx];
