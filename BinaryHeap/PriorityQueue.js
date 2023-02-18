@@ -6,6 +6,7 @@ class PriorityQueue {
     constructor(){
         this.values = [];
     }
+    // add priority in parameter
     enqueue(val, priority){
         let newNode = new Node(val, priority);
         this.values.push(newNode);
