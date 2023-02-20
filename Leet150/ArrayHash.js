@@ -38,3 +38,22 @@ var twoSum = function(nums, target) {
     }
     return result;
 };
+
+
+// Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+var isAnagram = function(s, t) {
+    let counter1 = {}
+    let counter2 = {}
+    // edge case when s.length !== t.length return false;
+    if(s.length !== t.length) return false;
+    for(const val of s){
+        counter1[val] = (counter1[val] || 0) + 1
+    }
+    for(const val of t){
+        counter2[val] = (counter2[val] || 0) + 1
+    }
+    for(const key in counter1){
+        if(counter1[key] !== counter2[key]) return false;
+    }
+    return true;
+};
