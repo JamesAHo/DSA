@@ -47,10 +47,10 @@ var isAnagram = function(s, t) {
     // edge case when s.length !== t.length return false;
     if(s.length !== t.length) return false;
     for(const val of s){
-        counter1[val] = (counter1[val] || 0) + 1
+        counter1[val] = (counter1[val] || 0) + 1;
     }
     for(const val of t){
-        counter2[val] = (counter2[val] || 0) + 1
+        counter2[val] = (counter2[val] || 0) + 1;
     }
     for(const key in counter1){
         if(counter1[key] !== counter2[key]) return false;
