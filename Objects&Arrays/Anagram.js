@@ -27,3 +27,16 @@ validAnagram("", "") // return true
 validAnagram("aaz", "zza") // return false
 
 // Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+function groupAnagrams(strs){
+    // mapping charcount to list of anagrams
+    let hash = {};
+    for(let str of strs){
+        let key = str.split('').sort().join('');
+        if(!hash[key]){
+            hash[key] = [str]
+        }else{
+            hash[key].push(str)
+        }
+    }
+    return Object.values(hash)
+}
