@@ -1,7 +1,7 @@
 // Hash Table Class
 class HashTable{
     constructor(size=53){
-        this.keyMap = new Array(size)
+        this.keyMap = new Array(size);
     }
     _hash(key){
         let total = 0;
@@ -13,4 +13,23 @@ class HashTable{
         }
         return total;
     }
-}
+    // set
+    set(key,value){
+        let index = this._hash(key);
+        if(!this.keyMap[index]){
+            this.keyMap[index] = [];
+        }
+        this.keyMap[index].push([key, value]);
+    }
+    get(key){
+        let index = this._hash(key);
+        if(this.keyMap[index]){
+            for(let i = 0; i < this.keyMap[index].length;i++){
+                if(this.keyMap[index][i][0] === key){
+                    return this.keyMap[index][i][1];
+                }
+            }
+        }
+        return undefined;
+    }
+};
