@@ -3,7 +3,7 @@
 // Adjacency List
 class Graph{
     constructor(graph){
-        this.adjacency = {};
+        this.adjacencyList = {};
     }
     addVertex(vertex){
         if(this.adjacencyList[vertex] = []) this.adjacencyList[vertex] = [];
