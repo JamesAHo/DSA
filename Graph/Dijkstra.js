@@ -80,6 +80,7 @@ class WeightedGraph{
         const nodes = new PriorityQueue();
         const distances = {};
         const previous = {};
+        let path = [];
 
         // build up initial state
         for(let vertex in this.adjacencyList){
@@ -96,7 +97,10 @@ class WeightedGraph{
         while(nodes.values.length){
             smallest = nodes.dequeue().val
             if(smallest === finish){
-                
+                while(previous[smallest]){
+                    path.push(smallest);
+                    smallest = previous[smallest];
+                }
             }
             if(smallest || distances[smallest] !== Infinity){
                 for(let neighbor in this.adjacencyList[smallest]){
@@ -117,5 +121,6 @@ class WeightedGraph{
                 }
             }
         }
+        return path.concat(smallested).reverse();
     }
 }
