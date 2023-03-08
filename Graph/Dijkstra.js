@@ -85,8 +85,36 @@ class WeightedGraph{
         for(let vertex in this.adjacencyList){
             if(vertex === start){
                 distances[vertex] = 0;
+                nodes.enqueue(vertex,0);
             } else {
                 distances[vertex] = Infinity;
+                nodes.enqueue(vertex,Infinity);
+            }
+            previous[vertex] = null;
+        }
+        // visit remaining nodes
+        while(nodes.values.length){
+            smallest = nodes.dequeue().val
+            if(smallest === finish){
+                
+            }
+            if(smallest || distances[smallest] !== Infinity){
+                for(let neighbor in this.adjacencyList[smallest]){
+                    let nextNode = this.adjacencyList[smallest][neighbor];
+                    // find neighbors node
+                    console.log(neighbor)
+                    // calculate
+                    let candidate = distances[smallest] + nextNode.weight;
+                    if(candidate < distances[nextNode.node]){
+                        let nextNeighbor = nextNode.node
+                        // updating new smallest distance to neighbor
+                        distances[nextNeighbor] = candidate;
+                        // updating preevious how we got to neighbor
+                        previous[nextNeighbor] = smallest;
+                        // enqueue in priority queue with new priority
+                        nodes.enqueue(nextNeighbor, candidates);
+                    }
+                }
             }
         }
     }
