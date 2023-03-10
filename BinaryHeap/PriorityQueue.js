@@ -12,6 +12,7 @@ class PriorityQueue {
         this.values.push(newNode);
         this.bubbleUp();
     }
+    // helper function
     bubbleUp(){
         let idx = this.values.length - 1;
         const element = this.values[idx];
@@ -33,6 +34,7 @@ class PriorityQueue {
         }
         return min;
     }
+    // helpfer function
     sinkDown(){
         let idx = 0;
         const length = this.values.length;
