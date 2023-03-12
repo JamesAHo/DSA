@@ -51,7 +51,7 @@ class WeightedGraph{
         }
         // visit remaining nodes
         while(nodes.values.length){
-            smallest = nodes.dequeue().val
+            smallest = nodes.dequeue().val;
             if(smallest === finish){
                 while(previous[smallest]){
                     path.push(smallest);
