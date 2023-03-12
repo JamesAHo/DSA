@@ -1,5 +1,6 @@
 // shortest path between nodes ion a weighted graph
 // Write a weighted graph
+// this is a regular priority queue
 class PriorityQueue {
     constructor(){
         this.values = [];
