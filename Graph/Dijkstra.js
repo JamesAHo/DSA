@@ -77,6 +77,7 @@ class WeightedGraph{
                 }
             }
         }
+        // return result
         return path.concat(smallested).reverse();
     }
 }
