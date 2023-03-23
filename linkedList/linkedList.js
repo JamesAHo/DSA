@@ -15,14 +15,18 @@ class singlyLinkedList {
         this.tail = null;
     }
     push(value) {
+        // make new Node
         const newNode = new Node(value);
+        // if no list is empty then head = newNode and tail = newNode
         if(!this.head) {
             this.head = newNode;
             this.tail = newNode;
+        // otherwise tail.next = newNode 
         } else {
             this.tail.next = newNode;
             this.tail = newNode
         }
+        // increment the list length
         this.length++;
         return this
     }
