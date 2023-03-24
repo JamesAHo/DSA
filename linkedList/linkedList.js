@@ -24,7 +24,7 @@ class singlyLinkedList {
         // otherwise tail.next = newNode 
         } else {
             this.tail.next = newNode;
-            this.tail = newNode
+            this.tail = newNode;
         }
         // increment the list length
         this.length++;
