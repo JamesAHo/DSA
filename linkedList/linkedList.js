@@ -28,7 +28,7 @@ class singlyLinkedList {
         }
         // increment the list length
         this.length++;
-        return this
+        return this;
     }
     // pop method -- removing a node from the end of the Linked List
     pop() {
