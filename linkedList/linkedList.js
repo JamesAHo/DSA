@@ -158,7 +158,8 @@ class singlyLinkedList {
             fast = fast.next.next;
         }
         fast = head;
-        slow = reverse(slow)
+        // slow = reverse
+        slow = reverse(slow);
         while(slow) {
             if(fast.val !== slow.val) return false;
             slow = slow.next;
