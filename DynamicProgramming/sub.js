@@ -1,5 +1,6 @@
 // Dynamic programing with recursive solution + memorized\
 // Time complexity is O(n)
+// this method will solve the time complexity problem
 function fib(n, memo = []){
     if(memo[n] !== undefined) return memo[n];
     if(n <= 2) return 1;
@@ -9,6 +10,7 @@ function fib(n, memo = []){
 }
 
 // non memorize solution
+// might me slow if run big number
 function fib(n){
     if(n <= 2) return 1;
     return fib(n-1) + fib(n-2);
