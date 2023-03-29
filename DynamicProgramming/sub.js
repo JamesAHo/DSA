@@ -12,6 +12,8 @@ function fib(n, memo = []){
 // non memorize solution
 // might me slow if run big number
 function fib(n){
+    // base case
     if(n <= 2) return 1;
+    // recurse 
     return fib(n-1) + fib(n-2);
 }
