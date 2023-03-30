@@ -102,6 +102,7 @@ class BST {
             if(node.right) traverse(node.right)
         }
         traverse(this.root)
+        // return data
         return data;
     }
 }
