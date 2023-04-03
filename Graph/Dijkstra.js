@@ -21,6 +21,7 @@ class PriorityQueue {
 }
 class WeightedGraph{
     constructor(){
+        // adjacency List
         this.adjacencyList = {};
     }
     addVertext(vertex){
