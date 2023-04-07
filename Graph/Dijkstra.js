@@ -34,6 +34,7 @@ class WeightedGraph{
     }
     //
     Dijkstra(start, finish){
+        // call nodes as new PriorityQueue
         const nodes = new PriorityQueue();
         const distances = {};
         const previous = {};
