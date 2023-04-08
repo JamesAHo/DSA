@@ -105,6 +105,7 @@ class DoublyLinkedList{
     }
     // insert method
     insert(index,val){
+        // edge cases
         if(index < 0 || index >= this.length) return false;
         if(index === 0) return this.unshift(val);
         if(index === this.length) return this.push(val);
