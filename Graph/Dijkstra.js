@@ -52,6 +52,7 @@ class WeightedGraph{
             previous[vertex] = null;
         }
         // visit remaining nodes
+        // time complexity is O2
         while(nodes.values.length){
             smallest = nodes.dequeue().val;
             if(smallest === finish){
