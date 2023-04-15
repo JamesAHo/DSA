@@ -17,6 +17,7 @@ class PriorityQueue {
         let idx = this.values.length - 1;
         const element = this.values[idx];
         while(idx > 0){
+            // formular
             let parentIdx = Math.floor((idx - 1)/2);
             let parent = this.values[parentIdx];
             if(element.priority >= parent.priority) break;
