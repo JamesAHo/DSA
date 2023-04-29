@@ -20,6 +20,7 @@ class Graph{
             v => v !== vertex1
         );
     }
+    // remove vertex from the graph
     removeVertex(vertex){
         while(this.adjacencyList[vertex].length){
             const adjacentVertex = this.adjacencyList[vertex].pop();
@@ -64,6 +65,23 @@ class Graph{
         return result;
     }
     // BFS
+    BFS(start){
+        const queue = [start];
+        const result = [];
+        const visited = {};
+        let currentVertex;
+        while(queue.length){
+            currentVertex = queue.shift();
+            result.push(currentVertex);
+            this.adjacencyList[currentVertex].forEach(neighbor => {
+                if(!visited[neighbor]){
+                    visited[neighbor] = true;
+                    queue.push(neighbor);
+                }
+            })
+        }
+        return result;
+    }
 
 }
 
