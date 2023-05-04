@@ -28,7 +28,7 @@ class Graph{
         }
         delete this.adjacencyList[vertex];
     }
-    // DFS recursive
+    // DFS recursive method
     DFS(start){
         const result = [];
         const visited = {};
